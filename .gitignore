@@ -1,3 +1,6 @@
 .claude
 .idea
 .venv
+.DS_Store
+__pycache__
+kick_zscaler.py
