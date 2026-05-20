@@ -1,3 +1,5 @@
+import kick_zscaler
+
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline, GenerationConfig
 
 model_name = "google/gemma-4-E4B-it"
@@ -13,10 +15,8 @@ pip = pipeline(
     model=model,
     tokenizer=tokenizer,
     return_full_text=False,
-    generation_config = GenerationConfig(
-        max_new_tokens=500,
-        do_sample=False,
-    )
+    max_new_tokens=500,
+    do_sample=False,
 )
 
 messages = [
