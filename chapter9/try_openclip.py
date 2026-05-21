@@ -43,7 +43,7 @@ def image_caption_score(image_file: str, caption: str):
 
     # 计算它们的相似度
     score = F.cosine_similarity(image_embedding, text_embedding)
-    print(f"{image_file}->{caption}: {score.tolist()[0]:.4f}")
+    print(f"{image_file}->{caption}: {score.tolist()[0]:.2f}")
 
 
 def save_sample_image(processed_image: np.ndarray, image_file: str):
@@ -57,12 +57,12 @@ def save_sample_image(processed_image: np.ndarray, image_file: str):
 
 
 if __name__ == '__main__':
-    images = ["puppy.png", "cat.png", "car.png"]
+    image_files = ["vit-split-image.png", "cat.png", "car.png"]
     captions = [
         "a puppy playing in the snow",
         "a pixelated image of a cute cat",
         "A supercar on the road \nwith the sunset in the background"
     ]
-    for image in images:
+    for image_file in image_files:
         for caption in captions:
-            image_caption_score(image, caption)
+            image_caption_score(image_file, caption)
