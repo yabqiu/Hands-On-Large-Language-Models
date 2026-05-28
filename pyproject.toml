@@ -23,6 +23,7 @@ dependencies = [
     "llama-cpp-python>=0.3.23",
     "lxml>=6.1.0",
     "matplotlib>=3.10.9",
+    "mteb>=2.12.30",
     "nbformat>=5.10.4",
     "openai>=2.36.0",
     "pandas>=3.0.3",

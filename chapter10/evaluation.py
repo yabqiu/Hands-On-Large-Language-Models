@@ -1,0 +1,2 @@
+import mteb
+from sentence_transformers import SentenceTransformer
